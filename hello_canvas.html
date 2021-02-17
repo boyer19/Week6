@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Comments go in these -->
+    <head>
+        <meta charset="UTF-8">
+        <title>Canvas</title>
+        <link rel="stylesheet" type="text/css" href="style-canvas.css">
+    </head>
+    <body>
+        <!-- Write your HTML content here -->
+        <canvas id="canvas" height="500" width="500">
+
+        </canvas>
+	<h1></h1>
+
+    <script>
+        // Write your script here
+        let canvas = document.querySelector('#canvas')
+        let context = canvas.getContext('2d')   // Drawing context. What actually does the drawing on canvas
+
+        // Text
+        context.fillStyle = 'magenta'
+        context.font = '50px Courier'
+        context.fillText('Hello World', 50, 50)
+        // Outline text
+        context.strokeStyle = 'green'
+        context.strokeText('This is some more text', 50, 200) // Text is too long for canvas, adjust canvas size to fit all of text
+
+        /*
+        //Circles
+        context.beginPath()
+        context.arc(250, 250, 75, 0, 6.3)           // .arc(x: number, y: number, radius: number, endangle: number (or 2 * Math.PI), anticlockwise?: , boolean: void )
+        // segments(250, 250, 75, 2, 4)		Creates a part of a circle
+		// segments(250, 250, 75, 0, Math.PI)	Creates an exact 1/2 circle
+		// segments(250, 250, 75, 0, Math.PI/2)	Creates an exact 1/4 circle
+        context.strokeStyle = 'blue' 
+		context.lineWidth = 5
+        context.stroke() */
+        /*
+        //Drawing lines
+        context.beginPath()
+        context.moveTo(0, 10)          // Sets beginning coordinates
+        context.lineTo(450, 450)        // Sets ending coordinates
+        // Multiple line segments
+        context.lineTo(450, 30)
+        context.lineTo(10, 0)
+
+        context.lineWidth = 30
+        context.strokeStyle = 'purple'
+        context.stroke()
+        // Another line path
+        context.beginPath()
+        context.moveTo(250, 250)
+        context.lineTo(250, 500)
+        context.lineWidth = 5
+        context.strokeStyle = 'yellow'
+        context.stroke() */
+
+        
+
+        /* Drawing Rectangles with dimensions and color
+        context.fillRect(120, 20, 50, 200)     // Asking the context to draw whatever you need. fillRect(20, 20, 100, 100) = Fills in shapes. fill rectangle(coordinates x: number, y: number, w: number, h: number)
+        context.strokeRect(200, 300, 100, 150)
+
+        context.fillStyle = 'red'               // Changes box fill color
+        context.fillRect(400, 50, 100, 100)
+        context.strokeStyle = 'green'           // Changes box outline color
+        context.lineWidth = 20                     // Changes line width in pixels
+        context.strokeRect(350, 350, 50, 50)
+
+        context.fillStyle ='yellow'
+        context.fillRect(220, 100, 150, 150)        // Fill and outline
+        context.strokeStyle = 'blue'                // Both fill and outline
+        context.lineWidth = 5
+        context.strokeRect(220, 100, 150, 150) */
+    </script>
+    </body>
+
+</html>
