@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Comments go in these -->
+    <head>
+        <meta charset="UTF-8">
+        <title>Drawing on Canvas</title>
+        <link rel="stylesheet" type="text/css" href="style-canvas.css">
+    </head>
+    <body>
+        <!-- Write your HTML content here -->
+        <canvas id="canvas" height ="500" width = "500"></canvas>
+
+        
+	<h1></h1>
+
+    <script>
+        // Write your script here
+        let canvas = document.querySelector("#canvas")
+        let context = canvas.getContext('2d')
+
+        canvas.addEventListener('click', function() {
+            let x = event.offsetX
+            let y = event.offsetY
+            // Use arc instead of rect to draw circles--- see hello_canvas.html
+           // context.fillRect(x, y, 30, 30)          // Adds a rectangle when clicked on canvas. Size of rectangle changes when numbers are changed. Rectangle is drawn under upper left of cursor
+           //context.fillRect(x-15, y-15, 30, 30)            // Same as above but x-15, y-15 centers rectangle under cursor
+           let size = 50
+           context.fillRect(x-(size/2), y-(size/2), size, size)
+        })
+    </script>
+    </body>
+
+</html>

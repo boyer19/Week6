@@ -1,0 +1,39 @@
+<!-- See drawing.html for labwork -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- Comments go in these -->
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <!-- Write your HTML content here -->
+
+    <h1></h1>
+    <p id="mouse-me">Move your mouse here!</p>
+
+    <script>
+        // Write your script here
+        let mouseCount = 0
+
+        let message = document.querySelector('#mouse-me')
+
+        message.addEventListener('mouseover', function() {
+            //increase mouseCount by 1
+            mouseCount = mouseCount + 1
+            // if else loop with conditional count up
+            if (mouseCount == 1) {
+                message.innerHTML = 'Your mouse has been on this message ' + mouseCount + ' time.'
+            } else {
+                    message.innerHTML = 'Your mouse has been on this message ' + mouseCount + ' times.' // modify message to include mousecount
+                }    
+        })                
+            
+        message.addEventListener('mouseout', function() {
+            message.innerHTML = 'Your mouse is Not on this message'
+        })
+    </script>
+    </body>
+
+</html>
