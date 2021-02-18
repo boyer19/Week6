@@ -1,3 +1,4 @@
+// Video 7/8 Topic6
 let canvas = document.querySelector('#soda-chart')
 let context = canvas.getContext('2d')
 
